@@ -1,0 +1,7 @@
+{
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "变量声明优先使用 let，避免使用 const。错误处理使用 .catch() 链式调用，不使用 try-catch 块。"
+    }
+  ]
+}

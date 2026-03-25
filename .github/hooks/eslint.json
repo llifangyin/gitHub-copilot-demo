@@ -1,0 +1,4 @@
+{
+  "on": "file-changed",
+  "run": "npx eslint --fix {{changedFiles}}"
+}

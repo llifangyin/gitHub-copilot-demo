@@ -40,3 +40,126 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ListPage styles */
+.list-page {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.count {
+  color: #888;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.add-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.add-form input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.add-form button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  background: #646cff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.add-form button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.item-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.item-list li.completed .item-name {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-weight: 500;
+}
+
+.item-desc {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.delete-btn {
+  padding: 0.3rem 0.75rem;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid #555;
+  color: #f87171;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+  background: #2a1010;
+  border-color: #f87171;
+}
+
+.empty {
+  color: #666;
+  text-align: center;
+  padding: 2rem;
+  justify-content: center;
+}

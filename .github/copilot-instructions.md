@@ -1,0 +1,4 @@
+- 所有函数必须有 JSDoc 注释
+- 使用 TypeScript，禁用 any 类型
+- 错误处理统一使用 try-catch，禁止 .catch()
+- 使用 ES Module（import/export），禁止 require()
