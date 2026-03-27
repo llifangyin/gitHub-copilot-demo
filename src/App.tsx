@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import { useState } from 'react'
 import HomePage from './components/HomePage'
 import FormPage, { ListItem } from './components/FormPage'
