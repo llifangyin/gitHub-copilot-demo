@@ -79,10 +79,13 @@
   .system-title:hover {
     background: linear-gradient(90deg, #60a5fa 0%, #2563eb 100%);
   }
-    /* 菜单极简大按钮风格 */
+  }
+
+  /* 菜单极简大按钮风格（全局） */
   .header-menu {
     display: flex;
     gap: 1.5rem;
+    z-index: 200;
   }
   .menu-link {
     font-size: 1.18rem;
@@ -98,6 +101,7 @@
     transition: color 0.25s, background 0.25s, box-shadow 0.25s, border 0.25s, transform 0.25s;
     position: relative;
     overflow: hidden;
+    z-index: 201;
   }
   .menu-link:hover {
     color: #fff;
