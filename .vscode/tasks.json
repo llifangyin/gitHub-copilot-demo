@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "preview-dist",
+			"type": "shell",
+			"command": "npx serve ./dist -l 5000",
+			"args": [],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}
