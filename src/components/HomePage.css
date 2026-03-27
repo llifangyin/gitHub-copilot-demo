@@ -1,8 +1,17 @@
 .home-page {
+  width: 100vw;
+  min-height: 100vh;
   scroll-snap-type: y mandatory;
+  background: #f6faff;
+  color: #222;
+  font-family: 'Segoe UI', 'PingFang SC', Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 .full-screen-section {
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,16 +62,7 @@
   opacity: 1;
   transform: translateY(0);
 }
-.home-page {
-  width: 100%;
-  min-height: 200vh;
-  background: linear-gradient(120deg, #232526 0%, #414345 100%);
-  color: #fff;
-  font-family: 'Segoe UI', 'PingFang SC', Arial, sans-serif;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-}
+
 
 .hero {
   padding: 4rem 2rem 2rem 2rem;
