@@ -1,17 +1,23 @@
+
 import './HomePage.css'
+import { useScrollHeader, useSectionFadeIn } from './useScrollEffects'
 
 /**
  * 首页组件，自动填充内容，支持滚动和炫酷动画
  */
 function HomePage() {
+  useScrollHeader()
+  useSectionFadeIn()
   return (
     <div className="home-page">
-      <section className="hero">
-        <h1>欢迎来到 Copilot Demo</h1>
-        <p>体验 AI 赋能的现代前端开发流程，探索自动补全、智能对话、Agent 自动化等前沿能力。</p>
+      {/* Section 1: 炫酷欢迎 */}
+      <section className="hero full-screen-section">
+        <h1 className="gradient-title">欢迎来到 Copilot Demo</h1>
+        <p className="hero-desc">体验 AI 赋能的现代前端开发流程，探索自动补全、智能对话、Agent 自动化等前沿能力。</p>
       </section>
-      <section className="features">
-        <h2>核心特性</h2>
+      {/* Section 2: 核心特性 */}
+      <section className="features full-screen-section">
+        <h2 className="gradient-title">核心特性</h2>
         <ul>
           <li>⚡ 极速开发体验，Vite + React 19</li>
           <li>🤖 Copilot 智能补全与对话</li>
@@ -21,8 +27,9 @@ function HomePage() {
           <li>🎨 现代动画与交互体验</li>
         </ul>
       </section>
-      <section className="showcase">
-        <h2>项目亮点</h2>
+      {/* Section 3: 项目亮点 */}
+      <section className="showcase full-screen-section">
+        <h2 className="gradient-title">项目亮点</h2>
         <div className="card-list">
           <div className="card">多模型切换，适配不同场景</div>
           <div className="card">全链路自动化：从代码到 PR 审查</div>
@@ -30,8 +37,9 @@ function HomePage() {
           <div className="card">MCP 集成，打通外部工具链</div>
         </div>
       </section>
-      <section className="long-content">
-        <h2>更多内容</h2>
+      {/* Section 4: 生态与未来 */}
+      <section className="long-content full-screen-section">
+        <h2 className="gradient-title">生态与未来</h2>
         <p>本项目覆盖 Copilot 全功能链路，包含：</p>
         <ol>
           <li>内联补全与多行函数生成</li>

@@ -1,9 +1,10 @@
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import HomePage from './components/HomePage'
 import FormPage, { ListItem } from './components/FormPage'
 import ListPage from './components/ListPage'
+import logo from './assets/react.svg'
 
 /** 初始列表数据 */
 let initialItems: ListItem[] = [
@@ -37,33 +38,24 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <header>
-          <h1>GitHub Copilot Demo</h1>
-        </header>
-        
-        <div className="app-content">
-          <nav className="sidebar">
-            <ul>
-              <li>
-                <Link to="/">首页</Link>
-              </li>
-              <li>
-                <Link to="/list">列表页</Link>
-              </li>
-              <li>
-                <Link to="/form">新增</Link>
-              </li>
-            </ul>
+        <header className="main-header">
+          <div className="logo-title">
+            <img src={logo} alt="logo" className="logo-img" />
+            <span className="system-title">GitHub Copilot Demo</span>
+          </div>
+          <nav className="header-menu">
+            <Link to="/" className="menu-link">首页</Link>
+            <Link to="/list" className="menu-link">列表页</Link>
+            <Link to="/form" className="menu-link">新增</Link>
           </nav>
-          
-          <main className="main">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/list" element={<ListPage items={items} setItems={setItems} />} />
-              <Route path="/form" element={<FormPage onAddItem={handleAddItem} />} />
-            </Routes>
-          </main>
-        </div>
+        </header>
+        <main className="main">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/list" element={<ListPage items={items} setItems={setItems} />} />
+            <Route path="/form" element={<FormPage onAddItem={handleAddItem} />} />
+          </Routes>
+        </main>
       </div>
     </Router>
   )

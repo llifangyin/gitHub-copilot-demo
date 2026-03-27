@@ -18,13 +18,12 @@
   padding: 1.5rem 2rem;
   background: #ffffff;
   border-bottom: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.app-content {
-  display: flex;
-  flex: 1;
-  padding: 2rem;
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f6faff;
+  }
   gap: 2rem;
   align-items: flex-start;
 }
@@ -33,6 +32,72 @@
 .sidebar {
   width: 220px;
   flex-shrink: 0;
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    height: 72px;
+    background: #fff;
+    box-shadow: 0 2px 16px #3b82f61a;
+    border-bottom: 1.5px solid #e0eaff;
+    transition: top 0.4s cubic-bezier(.77,0,.18,1);
+  }
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .logo-img {
+    height: 2.6rem;
+    width: 2.6rem;
+    margin-right: 0.2rem;
+    filter: drop-shadow(0 0 8px #3b82f6aa);
+    transition: filter 0.3s;
+  }
+  .logo-img:hover {
+    filter: drop-shadow(0 0 16px #60a5fa);
+  }
+  .system-title {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #2563eb 30%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    letter-spacing: 1.5px;
+    transition: background 0.4s;
+  }
+  .system-title:hover {
+    background: linear-gradient(90deg, #60a5fa 0%, #2563eb 100%);
+  }
+  .header-menu {
+    display: flex;
+    gap: 2.5rem;
+  }
+  .menu-link {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #e0eaff 0%, #f6faff 100%);
+    transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 1px 6px #3b82f61a;
+  }
+  .menu-link:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+    box-shadow: 0 2px 12px #60a5fa44;
+  }
   background: #ffffff;
   border-radius: 10px;
   padding: 1.5rem;
@@ -52,6 +117,13 @@
   margin: 0;
 }
 
+  .main {
+    flex: 1;
+    min-width: 0;
+    margin-top: 72px;
+    padding: 0;
+    background: transparent;
+  }
 .sidebar a {
   display: block;
   padding: 0.75rem 1rem;
